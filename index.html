@@ -1743,7 +1743,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1697698278200),
+    lastupdate: new Date(1697703186914),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2188,8 +2188,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
         <a class="title flat-box" target="_self" href='/'>
           
-            <img no-lazy class='logo' src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
+            <img no-lazy class='logo' src='images/icon.ico'/>
           
+          
+            <i class='images/icon.ico'></i>
           
           
         </a>
@@ -2374,7 +2376,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="half" class='cover-wrapper  dock' style="display: ;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="images/a.jpg"></div>
+  <div class='cover-bg lazyload placeholder' data-bg="images/bg.jpg"></div>
 
 <div class='cover-body'>
   <div class='top'>
@@ -2452,7 +2454,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://evevn.com/2023/10/18/hello-world/">
+  <link itemprop="mainEntityOfPage" href="https://evevn.com/2023/inotify+rsync实时同步/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="北屿">
   </span>
@@ -2470,16 +2472,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2023/10/18/hello-world/"  itemprop="url">
-        Hello World
+      <a href="/2023/inotify+rsync%E5%AE%9E%E6%97%B6%E5%90%8C%E6%AD%A5/"  itemprop="url">
+        Ubuntu下inotify+rsync实时同步
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
+        一、主服务器（发送文件的一方）1.需要安装inotify-tools辅助工具和rsyncrsync监听端口：873
+12apt-get install inotify-toolsapt-get install rsync
+创建需要同步的源路径：
+12mkdir /home/backup/chmod 777 /home/backup/
+创建rsync验证的密码文件：
+12echo passwo...
       
     
   </div>
@@ -2487,20 +2493,20 @@ Qu...
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2023-10-18T17:39:36+08:00">2023-10-18</time>
+        <time itemprop="dateCreated datePublished" datetime="2023-10-19T15:25:53+08:00">2023-10-19</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/Python/">Python</a>
+          <a class="category-link" href="/categories/Linux/">Linux</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Python/" itemprop="url"><span itemprop="name">Python</span></a>
+              <a href="/categories/Linux/" itemprop="url"><span itemprop="name">Linux</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2023/10/18/hello-world/' itemprop="url">
+          <a class='readmore' href='/2023/inotify+rsync%E5%AE%9E%E6%97%B6%E5%90%8C%E6%AD%A5/' itemprop="url">
             Read More
           </a>
         </div>
@@ -2532,8 +2538,8 @@ Qu...
   <div class='content'>
     
       
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/Logo-NavBar@3x.png'/>
+        <a class='avatar flat-box rectangle' href='/'>
+          <img no-lazy src='images/tx.jpg'/>
         </a>
       
     
@@ -2551,7 +2557,7 @@ Qu...
       <div class="social-wrapper">
         
           
-            <a href="/atom.xml"
+            <a href="/"
               class="social fa-solid fa-rss flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
@@ -2560,26 +2566,8 @@ Qu...
           
         
           
-            <a href="mailto:me@xxx.com"
+            <a href="mailto:3020949357@qq.com"
               class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/volantis-x/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="/"
-              class="social fa-solid fa-headphones-alt flat-btn"
               target="_blank"
               rel="external nofollow noopener noreferrer">
               
@@ -2612,9 +2600,9 @@ Qu...
       <ul class="entry navigation">
         
           <li><a class="flat-box"
-            title="/categories/Python/" href="/categories/Python/"
-            active-action="action-categoriesPython"
-            ><div class='name'>Python</div><div class='badge'>(1)</div></a></li>
+            title="/categories/Linux/" href="/categories/Linux/"
+            active-action="action-categoriesLinux"
+            ><div class='name'>Linux</div><div class='badge'>(1)</div></a></li>
         
       </ul>
     </div>
@@ -2639,7 +2627,7 @@ Qu...
 
 
     <div class='content'>
-      <a href="/tags/Start/" style="font-size: 14px; color: #999">Start</a>
+      <a href="/tags/Ubuntu/" style="font-size: 14px; color: #999">Ubuntu</a> <a href="/tags/inotify/" style="font-size: 14px; color: #999">inotify</a> <a href="/tags/rsync/" style="font-size: 14px; color: #999">rsync</a>
     </div>
   </section>
 
