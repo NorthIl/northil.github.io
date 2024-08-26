@@ -1744,7 +1744,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1724664066871),
+    lastupdate: new Date(1724666048517),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2477,8 +2477,12 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        WordPress常见问题之”There has been a critical error on your website”.导致这个问题的原因基本有两点，一是手动更新WordPress版本时发生错误导致的；二是安装的主题不兼容或其他原因导致的。
-一、因为手动安装主题导致，步骤如下1）手动下载好最新安装包后，对网站数据进行备份2）进入网站FTP目录，对目录内文件进行更换（wp-config...
+        WordPress常见问题之”There has been a critical error on your website”.导致这个问题的原因基本有两点
+
+一是手动更新WordPress版本时发生错误导致的；
+二是安装的主题或插件不兼容导致的。
+
+一、因为手动安装主题导致，步骤如下1）手动下载好最新安装包后，对网站数据进行备份2）进入网站FTP目录，对目录内文件进行更换（wp-confi...
       
     
   </div>
@@ -2544,10 +2548,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         IIS服务器报错ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY
 
 
-导致这个问题的原因应该是Windows server版本默认开启了http2，但是启用了一些不安全的加密套件导致的。解决方法1：修改加密套件和加密协议，使用工具IISCrypto配置解决
+导致这个问题的原因应该是Windows server版本默认开启了http2，但是启用了一些不安全的加密套件导致的。
 
+解决方法1：修改加密套件和加密协议，使用工具IISCrypto配置解决
 
-解决方法2：禁用HTTP2，这个方法应该也可以实现，但是不建议，建议还是使用方案一。运行regedit...
+解决方法2：禁用HTTP2，这个方法应该也可以实现，但是不建议，建议还是使用方案一。运行regedi...
       
     
   </div>
@@ -2811,7 +2816,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © SKing 2022-2024</a></p>
+        <p><a href="/">Copyright © Nye 2022-2024</a></p>
 
         </div>
       
@@ -2943,55 +2948,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-      <script>
-  volantis.layoutHelper("comments",`<div id="giscus_container"></div>`)
-
-  volantis.giscus = {};
-
-  function check_giscus() {
-    if (volantis.dark.mode === "dark") {
-      volantis.giscus.Theme = 'dark';
-    } else {
-      volantis.giscus.Theme = 'light';
-    }
-
-    return document.getElementById("giscus_container");
-  }
-
-  function pjax_giscus() {
-    const HEAD = check_giscus();
-    if (!HEAD) return;
-    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"}},pdata.commentConfig)
-    const script = document.createElement('script');
-    script.setAttribute('src', 'https://giscus.app/client.js');
-    Object.keys(cfg).forEach(k=>{
-      if (k != "theme") {
-        script.setAttribute('data-'+k, cfg[k]);
-      }
-    })
-    script.setAttribute('data-theme', volantis.giscus.Theme);
-    script.setAttribute('crossorigin', "anonymous");
-    HEAD.appendChild(script);
-  }
-
-  function dark_giscus() {
-    const HEAD = check_giscus();
-    if (!HEAD) return;
-
-    const message = {
-      setConfig: {
-        theme: volantis.giscus.Theme
-      }
-    };
-    const giscusIframe = document.querySelector('iframe.giscus-frame');
-    giscusIframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-  }
-  pjax_giscus();
-  volantis.pjax.push(pjax_giscus);
-  volantis.dark.push(dark_giscus);
-</script>
-
-    
 
 
 

@@ -42,11 +42,11 @@
 <meta property="og:title" content="ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY">
 <meta property="og:url" content="https://nye.asia/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/index.html">
 <meta property="og:site_name" content="Nye&#39;s Blog">
-<meta property="og:description" content="IIS服务器报错ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY   导致这个问题的原因应该是Windows server版本默认开启了http2，但是启用了一些不安全的加密套件导致的。解决方法1：修改加密套件和加密协议，使用工具IISCrypto配置解决   解决方法2：禁用HTTP2，这个方法应该也可以实现，但是不建议，建议还是使用方案一。运行regedit打开注">
+<meta property="og:description" content="IIS服务器报错ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY   导致这个问题的原因应该是Windows server版本默认开启了http2，但是启用了一些不安全的加密套件导致的。  解决方法1：修改加密套件和加密协议，使用工具IISCrypto配置解决  解决方法2：禁用HTTP2，这个方法应该也可以实现，但是不建议，建议还是使用方案一。运行regedit打开">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2023-06-28T07:49:43.000Z">
-<meta property="article:modified_time" content="2024-08-26T09:08:29.948Z">
+<meta property="article:modified_time" content="2024-08-26T09:26:49.221Z">
 <meta property="article:author" content="Nye">
 <meta property="article:tag" content="SSL">
 <meta property="article:tag" content="Windows Server">
@@ -1747,7 +1747,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1724664066871),
+    lastupdate: new Date(1724666048517),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2468,7 +2468,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
   <a itemprop="url" class='author' href="/" rel="nofollow">
     <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <p itemprop="name">SKing</p>
+    <p itemprop="name">Nye</p>
   </a>
 </div>
 
@@ -2519,13 +2519,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <p>IIS服务器报错ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY</p>
 <img src="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/error.png" class="lazyload" data-srcset="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/error.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" lazyload" title="error.png">
 
-<p>导致这个问题的原因应该是Windows server版本默认开启了http2，但是启用了一些不安全的加密套件导致的。<br>解决方法1：<br>修改加密套件和加密协议，使用工具IISCrypto配置解决</p>
-<img src="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/IIS-1.png" class="lazyload" data-srcset="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/IIS-1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" lazyload" title="IIS-1">
-<img src="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/IIS-2.png" class="lazyload" data-srcset="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/IIS-2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" lazyload" title="IIS-2.png">
-<p>解决方法2：<br>禁用HTTP2，这个方法应该也可以实现，但是不建议，建议还是使用方案一。<br>运行regedit打开注册表，进入<code>[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters]</code></p>
-<img src="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/regedit-1.png" class="lazyload" data-srcset="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/regedit-1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" lazyload" title="regedit-1.png">
-<p>新建“32位值”：<br>名称分别为<code>“EnableHttp2Tls”</code>、<code>“EnableHttp2Cleartext”</code></p>
-<img src="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/regedit-2.png" class="lazyload" data-srcset="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/regedit-2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" lazyload" title="regedit-2.png">
+<p>导致这个问题的原因应该是Windows server版本默认开启了http2，但是启用了一些不安全的加密套件导致的。</p>
+<ul>
+<li>解决方法1：<br>修改加密套件和加密协议，使用工具IISCrypto配置解决<img src="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/IIS-1.png" class="lazyload" data-srcset="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/IIS-1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" lazyload" title="IIS-1">
+<img src="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/IIS-2.png" class="lazyload" data-srcset="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/IIS-2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" lazyload" title="IIS-2.png"></li>
+<li>解决方法2：<br>禁用HTTP2，这个方法应该也可以实现，但是不建议，建议还是使用方案一。<br>运行regedit打开注册表，进入<code>[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters]</code><img src="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/regedit-1.png" class="lazyload" data-srcset="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/regedit-1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" lazyload" title="regedit-1.png">
+新建“32位值”：<br>名称分别为<code>“EnableHttp2Tls”</code>、<code>“EnableHttp2Cleartext”</code><img src="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/regedit-2.png" class="lazyload" data-srcset="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/regedit-2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" lazyload" title="regedit-2.png"></li>
+</ul>
 <p>两个方法都需要重启服务器才能生效，方法二为网上看到的，没有验证，需要自己验证一下。 </p>
 
   </div>
@@ -2551,7 +2551,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-08-26T17:08:29+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-08-26T17:26:49+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2024年8月26日</p>
@@ -2636,7 +2636,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class='prev' href='/2023/There-has-been-a-critical-error-on-your-website/'>
           <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>There has been a critical error on your website.</p>
-          <p class='content'>WordPress常见问题之”There has been a critical error on your website”.导致这个问题的原因基本有两点，一是手动更新WordPress版本时...</p>
+          <p class='content'>WordPress常见问题之”There has been a critical error on your website”.导致这个问题的原因基本有两点
+
+一是手动更新WordPress版本...</p>
         </a>
       
       
@@ -2650,18 +2652,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
 
-
-  <article class="post white-box shadow floatable blur" id="comments">
-    <span hidden>
-      <meta itemprop="discussionUrl" content="/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/index.html#comments">
-    </span>
-    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
-    
-
-    <div id="layoutHelper-comments"></div>
-
-  </article>
-
+  
 
 
 
@@ -2807,7 +2798,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       
         <div class='copyright'>
-        <p><a href="/">Copyright © SKing 2022-2024</a></p>
+        <p><a href="/">Copyright © Nye 2022-2024</a></p>
 
         </div>
       
@@ -2939,55 +2930,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-      <script>
-  volantis.layoutHelper("comments",`<div id="giscus_container"></div>`)
-
-  volantis.giscus = {};
-
-  function check_giscus() {
-    if (volantis.dark.mode === "dark") {
-      volantis.giscus.Theme = 'dark';
-    } else {
-      volantis.giscus.Theme = 'light';
-    }
-
-    return document.getElementById("giscus_container");
-  }
-
-  function pjax_giscus() {
-    const HEAD = check_giscus();
-    if (!HEAD) return;
-    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"}},pdata.commentConfig)
-    const script = document.createElement('script');
-    script.setAttribute('src', 'https://giscus.app/client.js');
-    Object.keys(cfg).forEach(k=>{
-      if (k != "theme") {
-        script.setAttribute('data-'+k, cfg[k]);
-      }
-    })
-    script.setAttribute('data-theme', volantis.giscus.Theme);
-    script.setAttribute('crossorigin', "anonymous");
-    HEAD.appendChild(script);
-  }
-
-  function dark_giscus() {
-    const HEAD = check_giscus();
-    if (!HEAD) return;
-
-    const message = {
-      setConfig: {
-        theme: volantis.giscus.Theme
-      }
-    };
-    const giscusIframe = document.querySelector('iframe.giscus-frame');
-    giscusIframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-  }
-  pjax_giscus();
-  volantis.pjax.push(pjax_giscus);
-  volantis.dark.push(dark_giscus);
-</script>
-
-    
 
 
 
@@ -3252,7 +3194,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Nye's Blog","url":"https://nye.asia/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Nye","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nye.asia/","sameAs":["https://github.com/volantis-x"],"description":"北屿博客、个人技术博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://nye.asia/","name":"Nye's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://nye.asia/categories/SSL/","name":"SSL"}},{"@type":"ListItem","position":3,"item":{"@id":"https://nye.asia/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/","name":"ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Nye's Blog","url":"https://nye.asia/","keywords":"Nye's Blog、北屿博客、个人技术博客","description":"北屿博客、个人技术博客","author":{"@type":"Person","name":"Nye","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nye.asia/","description":"北屿博客、个人技术博客"},"publisher":{"@type":"Organization","name":"Nye's Blog","url":"https://nye.asia/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://nye.asia?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY","description":"北屿博客、个人技术博客","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://nye.asia/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/"},"author":{"@type":"Person","name":"Nye","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nye.asia/"},"publisher":{"@type":"Organization","name":"Nye's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://nye.asia/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/","wordCount":0,"datePublished":"2023-06-28T07:49:43.000Z","dateModified":"2024-08-26T09:08:29.948Z","articleSection":"SSL","keywords":"SSL,Windows Server","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Nye's Blog","url":"https://nye.asia/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Nye","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nye.asia/","sameAs":["https://github.com/volantis-x"],"description":"北屿博客、个人技术博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://nye.asia/","name":"Nye's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://nye.asia/categories/SSL/","name":"SSL"}},{"@type":"ListItem","position":3,"item":{"@id":"https://nye.asia/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/","name":"ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Nye's Blog","url":"https://nye.asia/","keywords":"Nye's Blog、北屿博客、个人技术博客","description":"北屿博客、个人技术博客","author":{"@type":"Person","name":"Nye","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nye.asia/","description":"北屿博客、个人技术博客"},"publisher":{"@type":"Organization","name":"Nye's Blog","url":"https://nye.asia/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://nye.asia?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ERR_HTTP2_INADEQUATE_TRANSPORT_SECURITY","description":"北屿博客、个人技术博客","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://nye.asia/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/"},"author":{"@type":"Person","name":"Nye","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://nye.asia/"},"publisher":{"@type":"Organization","name":"Nye's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://nye.asia/2023/ERR-HTTP2-INADEQUATE-TRANSPORT-SECURITY/","wordCount":0,"datePublished":"2023-06-28T07:49:43.000Z","dateModified":"2024-08-26T09:26:49.221Z","articleSection":"SSL","keywords":"SSL,Windows Server","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
