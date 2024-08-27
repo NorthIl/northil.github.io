@@ -46,7 +46,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-08-27T03:08:08.000Z">
-<meta property="article:modified_time" content="2024-08-27T03:25:23.025Z">
+<meta property="article:modified_time" content="2024-08-27T09:49:13.119Z">
 <meta property="article:author" content="Nye">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Windows">
@@ -1751,7 +1751,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1724751909586),
+    lastupdate: new Date(1724752704281),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2538,45 +2538,44 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="1-SSL证书优化建议"><a href="#1-SSL证书优化建议" class="headerlink" title="1 SSL证书优化建议"></a>1 <strong>SSL证书优化建议</strong></h1><h2 id="1-1-证书完整性"><a href="#1-1-证书完整性" class="headerlink" title="1.1 证书完整性"></a>1.1 <strong>证书完整性</strong></h2><ol>
+    <h2 id="1-SSL证书优化建议"><a href="#1-SSL证书优化建议" class="headerlink" title="1 SSL证书优化建议"></a>1 <strong>SSL证书优化建议</strong></h2><h3 id="1-1-证书完整性"><a href="#1-1-证书完整性" class="headerlink" title="1.1 证书完整性"></a>1.1 <strong>证书完整性</strong></h3><ol>
 <li>确认证书颁发机构的可信性：证书颁发机构（CA）的可信性非常重要，只有可信的CA才能确保证书的真实性和完整性。因此，应该选择信誉良好、受信任的CA颁发证书。</li>
 <li>证书的有效期：证书的有效期是指证书可以被使用的时间段。过期的证书不能再被信任，因为证书颁发机构不能保证证书的完整性和真实性。因此，需要确保证书在使用期限内，并及时更新证书。</li>
 </ol>
-<h2 id="1-2-证书链"><a href="#1-2-证书链" class="headerlink" title="1.2 证书链"></a>1.2 <strong>证书链</strong></h2><ol>
+<h3 id="1-2-证书链"><a href="#1-2-证书链" class="headerlink" title="1.2 证书链"></a>1.2 <strong>证书链</strong></h3><ol>
 <li>在配置SSL证书时，需要配置证书链，主要是为了保证证书的可信度和完整性。</li>
 <li>SSL证书链实际上是由证书颁发机构（CA）颁发的一系列证书，其中最后一张证书是网站服务器使用的SSL证书。客户端在建立与服务器的SSL连接时，需要验证服务器提供的SSL证书的有效性。证书链就是用来验证SSL证书的有效性，保证证书的可信度和完整性。</li>
 <li>如果SSL证书链没有正确配置，客户端将无法验证证书的有效性，这会导致安全漏洞。因此，在配置SSL证书时，必须正确配置证书链，以保证证书的可信度和完整性。</li>
 </ol>
-<h2 id="1-3-加密套件与协议版本"><a href="#1-3-加密套件与协议版本" class="headerlink" title="1.3 加密套件与协议版本"></a>1.3 <strong>加密套件与协议版本</strong></h2><p>在配置 SSL 证书时，需要选择安全性更高、强大的加密套件和协议版本，例如使用 AES 算法或者 ECDHE 密钥交换协议，同时应该禁用不安全的加密套件，如 MD5 和 RC4。此外，还应该使用支持 Perfect Forward Secrecy（PFS）的密钥交换协议，例如 ECDHE 和 DHE，以保护通信过程中的数据安全性。在选择证书时，建议选择由可靠的证书机构颁发的证书，并且及时更新证书以保证证书的有效性和安全性。另外，在 SSL 配置中，使用最新的协议版本，如 TLS1.2、TLS1.3，可以提高安全性和性能。<br>推荐使用套件和协议:</p>
-<p><strong>协议</strong><code>TLSv1.0，TLSv1.1，TLSv1.2</code></p>
+<h3 id="1-3-加密套件与协议版本"><a href="#1-3-加密套件与协议版本" class="headerlink" title="1.3 加密套件与协议版本"></a>1.3 <strong>加密套件与协议版本</strong></h3><p>在配置 SSL 证书时，需要选择安全性更高、强大的加密套件和协议版本，例如使用 AES 算法或者 ECDHE 密钥交换协议，同时应该禁用不安全的加密套件，如 MD5 和 RC4。此外，还应该使用支持 Perfect Forward Secrecy（PFS）的密钥交换协议，例如 ECDHE 和 DHE，以保护通信过程中的数据安全性。在选择证书时，建议选择由可靠的证书机构颁发的证书，并且及时更新证书以保证证书的有效性和安全性。另外，在 SSL 配置中，使用最新的协议版本，如 TLS1.2、TLS1.3，可以提高安全性和性能。<br>推荐使用套件和协议:</p>
+<p><strong>协议</strong>：<code>TLSv1.0，TLSv1.1，TLSv1.2</code></p>
 <p><strong>套件</strong>：<code>ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4:!DH:!DHE</code></p>
-<h2 id="1-4-加密套件与SSL协议配置方法："><a href="#1-4-加密套件与SSL协议配置方法：" class="headerlink" title="1.4 加密套件与SSL协议配置方法："></a>1.4 <strong>加密套件与SSL协议配置方法：</strong></h2><h3 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h3><p>打开Tomcat 安装目录 &gt; conf文件夹 &gt; server.xml文件，在server.xml文件中找到 <code>&lt;Connector port=”443”</code> 标签并修改以下参数：<br>修改协议如下<br><code>SSLProtocol=&quot;TLSv1,TLSv1.1,TLSv1.2&quot; </code></p>
-<p>修改加密套件如下<br><code>ciphers=&quot;ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4:!DH:!DHE&quot;</code></p>
-<h3 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h3><p>修改nginx 配置文件nginx.conf 如下(默认配置文件一般是在&#x2F;etc&#x2F;nginx&#x2F;目录下)：<br>#修改协议如下<br><code>ssl_protocols TLSv1.1 TLSv1.2 TLSv1.3; </code><br>修改加密套件如下<br><code>ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!A DH:!RC4; </code></p>
-<h3 id="Apache"><a href="#Apache" class="headerlink" title="Apache"></a>Apache</h3><p>打开Apache 安装目录下conf.d&#x2F;ssl.conf 文件(也可能是conf&#x2F;extra&#x2F;httpd-ssl.conf，与操作系统及安装方式有关)，在配置文件中查找以下配置语句:<br>#修改协议如下<br><code>SSLProtocol all -SSLv2 -SSLv3</code><br>修改加密套件如下<br><code>SSLCipherSuite ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4:!DH:!DHE</code></p>
-<h3 id="IIS"><a href="#IIS" class="headerlink" title="IIS"></a>IIS</h3><p>在Windows环境下，如果您想要修改SSL&#x2F;TLS协议和加密套件，可能需要进行注册表修改，这个过程相对较为复杂。因此，我们建议使用 “IIS Crypto”工具来进行修改。<br>工具的下载地址为“<a target="_blank" rel="noopener" href="https://www.nartac.com/Products/IISCrypto/Download">https://www.nartac.com/Products/IISCrypto/Download</a>”。<br> “IIS Crypto”工具的使用方法如下：</p>
+<h3 id="1-4-加密套件与SSL协议配置方法："><a href="#1-4-加密套件与SSL协议配置方法：" class="headerlink" title="1.4 加密套件与SSL协议配置方法："></a>1.4 <strong>加密套件与SSL协议配置方法：</strong></h3><h4 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h4><p>打开Tomcat 安装目录 &gt; conf文件夹 &gt; server.xml文件，在server.xml文件中找到 <code>&lt;Connector port=”443”</code> 标签并修改以下参数：<br>修改协议如下<br><code>SSLProtocol=&quot;TLSv1,TLSv1.1,TLSv1.2&quot; </code><br>修改加密套件如下<br><code>ciphers=&quot;ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4:!DH:!DHE&quot;</code></p>
+<h4 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h4><p>修改nginx 配置文件nginx.conf 如下(默认配置文件一般是在&#x2F;etc&#x2F;nginx&#x2F;目录下)：<br>#修改协议如下<br><code>ssl_protocols TLSv1.1 TLSv1.2 TLSv1.3; </code><br>修改加密套件如下<br><code>ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!A DH:!RC4; </code></p>
+<h4 id="Apache"><a href="#Apache" class="headerlink" title="Apache"></a>Apache</h4><p>打开Apache 安装目录下conf.d&#x2F;ssl.conf 文件(也可能是conf&#x2F;extra&#x2F;httpd-ssl.conf，与操作系统及安装方式有关)，在配置文件中查找以下配置语句:<br>#修改协议如下<br><code>SSLProtocol all -SSLv2 -SSLv3</code><br>修改加密套件如下<br><code>SSLCipherSuite ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4:!DH:!DHE</code></p>
+<h4 id="IIS"><a href="#IIS" class="headerlink" title="IIS"></a>IIS</h4><p>在Windows环境下，如果您想要修改SSL&#x2F;TLS协议和加密套件，可能需要进行注册表修改，这个过程相对较为复杂。因此，我们建议使用 “IIS Crypto”工具来进行修改。<br>工具的下载地址为“<a target="_blank" rel="noopener" href="https://www.nartac.com/Products/IISCrypto/Download">https://www.nartac.com/Products/IISCrypto/Download</a>”。<br> “IIS Crypto”工具的使用方法如下：</p>
 <ol>
 <li>下载并打开“IIS Crypto”工具，进入工具后默认显示的是“Schannel”界面。点击左下角的“Best Practices”按钮，以应用推荐的配置。然后，点击右下角的“Apply”按钮，应用配置。</li>
 <li>然后，您需要点击左侧菜单栏中的“Cipher Suites”选项卡，然后再次点击左下角的“Best Practices”按钮以应用推荐配置。最后，再次点击右下角的“Apply”按钮，使配置生效。</li>
 <li>最后，重启服务器以使配置生效。</li>
 </ol>
 <p>使用“IIS Crypto”工具可以使修改SSL&#x2F;TLS协议和加密套件的过程更加简单和快捷。请注意，修改之前请先备份注册表，并确保您充分了解所做的更改及其可能带来的影响。</p>
-<h2 id="1-5-HSTS"><a href="#1-5-HSTS" class="headerlink" title="1.5 HSTS"></a>1.5 <strong>HSTS</strong></h2><ol>
+<h3 id="1-5-HSTS"><a href="#1-5-HSTS" class="headerlink" title="1.5 HSTS"></a>1.5 <strong>HSTS</strong></h3><ol>
 <li>HSTS（HTTP Strict Transport Security）是一种安全机制，可以告知浏览器只能通过 HTTPS 访问网站，从而防止恶意攻击者利用中间人攻击等手段窃取用户的敏感信息。启用 HSTS 可以提高网站的安全性，避免用户因为不慎访问了不安全的 HTTP 页面而受到攻击。</li>
 <li>启用 HSTS 可以有效地提高网站的安全性，但需要注意的是，在启用 HSTS 之前必须保证网站已经完全支持 HTTPS，并且证书也已经正确地配置好了。否则，可能会导致网站无法正常访问，甚至造成用户流失。</li>
 </ol>
-<h2 id="1-5-1-HSTS的配置方法："><a href="#1-5-1-HSTS的配置方法：" class="headerlink" title="1.5.1 HSTS的配置方法："></a>1.5.1 <strong>HSTS的配置方法：</strong></h2><h3 id="Tomcat-1"><a href="#Tomcat-1" class="headerlink" title="Tomcat"></a>Tomcat</h3><p>打开Tomcat安装目录 &gt; conf文件夹 &gt; web.xml 文件，在web.xml 文件的web-app标签中添加以下内容进行配置。（可以直接shif+G跳到文件末尾，在</web-app>前添加）</p>
+<h3 id="1-5-1-HSTS的配置方法："><a href="#1-5-1-HSTS的配置方法：" class="headerlink" title="1.5.1 HSTS的配置方法："></a>1.5.1 <strong>HSTS的配置方法：</strong></h3><h4 id="Tomcat-1"><a href="#Tomcat-1" class="headerlink" title="Tomcat"></a>Tomcat</h4><p>打开Tomcat安装目录 &gt; conf文件夹 &gt; web.xml 文件，在web.xml 文件的web-app标签中添加以下内容进行配置。（可以直接shif+G跳到文件末尾，在</web-app>前添加）</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;filter&gt;</span><br><span class="line">  &lt;filter-name&gt;httpHeaderSecurity&lt;/filter-name&gt;</span><br><span class="line">  &lt;filter-class&gt;org.apache.catalina.filters.HttpHeaderSecurityFilter&lt;/filter-class&gt;</span><br><span class="line">  &lt;async-supported&gt;true&lt;/async-supported&gt;</span><br><span class="line">  &lt;init-param&gt;</span><br><span class="line">    &lt;param-name&gt;hstsEnabled&lt;/param-name&gt;</span><br><span class="line">    &lt;param-value&gt;true&lt;/param-value&gt;</span><br><span class="line">  &lt;/init-param&gt;</span><br><span class="line">  &lt;init-param&gt;</span><br><span class="line">    &lt;param-name&gt;hstsMaxAgeSeconds&lt;/param-name&gt;</span><br><span class="line">    &lt;param-value&gt;31536000&lt;/param-value&gt;</span><br><span class="line">  &lt;/init-param&gt;</span><br><span class="line">&lt;/filter&gt;</span><br><span class="line">&lt;!-- The mapping for the HTTP header security Filter --&gt;</span><br><span class="line">&lt;filter-mapping&gt;</span><br><span class="line">  &lt;filter-name&gt;httpHeaderSecurity&lt;/filter-name&gt;</span><br><span class="line">  &lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span><br><span class="line">  &lt;dispatcher&gt;REQUEST&lt;/dispatcher&gt;</span><br><span class="line">&lt;/filter-mapping&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="Nginx-1"><a href="#Nginx-1" class="headerlink" title="Nginx"></a>Nginx</h3><p>修改nginx配置文件nginx.conf文件，在server段中添加’add_header’指令来设置响应头。<br><code>add_header Strict-Transport-Security &quot;max-age=31536000&quot;;</code></p>
-<h3 id="Apache-1"><a href="#Apache-1" class="headerlink" title="Apache"></a>Apache</h3><p>打开Apache安装目录下conf.d&#x2F;ssl.conf 文件(也可能是conf&#x2F;extra&#x2F;httpd-ssl.conf，与操作系统及安装方式有关)，在配置文件中找到你要启用 HSTS 的虚拟主机部分，通常是以 <VirtualHost> 开头的一段配置，添加以下配置语句:(在.htaccess文件中添加也可以)<br><code>Header always set Strict-Transport-Security &quot;max-age=31536000&quot;</code></p>
-<h3 id="IIS-1"><a href="#IIS-1" class="headerlink" title="IIS"></a>IIS</h3><p>在IIS管理器中，选择您的网站，在网站主页中，双击“HTTP响应标头”</p>
+<h4 id="Nginx-1"><a href="#Nginx-1" class="headerlink" title="Nginx"></a>Nginx</h4><p>修改nginx配置文件nginx.conf文件，在server段中添加’add_header’指令来设置响应头。<br><code>add_header Strict-Transport-Security &quot;max-age=31536000&quot;;</code></p>
+<h4 id="Apache-1"><a href="#Apache-1" class="headerlink" title="Apache"></a>Apache</h4><p>打开Apache安装目录下conf.d&#x2F;ssl.conf 文件(也可能是conf&#x2F;extra&#x2F;httpd-ssl.conf，与操作系统及安装方式有关)，在配置文件中找到你要启用 HSTS 的虚拟主机部分，通常是以 <VirtualHost> 开头的一段配置，添加以下配置语句:(在.htaccess文件中添加也可以)<br><code>Header always set Strict-Transport-Security &quot;max-age=31536000&quot;</code></p>
+<h4 id="IIS-1"><a href="#IIS-1" class="headerlink" title="IIS"></a>IIS</h4><p>在IIS管理器中，选择您的网站，在网站主页中，双击“HTTP响应标头”</p>
 <img src="/2024/ssl%E8%AF%81%E4%B9%A6%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE/IIS1.png" class="lazyload" data-srcset="/2024/ssl%E8%AF%81%E4%B9%A6%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE/IIS1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" lazyload">
 <p>在“HTTP响应标头页面”，点击右方“添加”按钮</p>
 <img src="/2024/ssl%E8%AF%81%E4%B9%A6%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE/IIS2.png" class="lazyload" data-srcset="/2024/ssl%E8%AF%81%E4%B9%A6%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE/IIS2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" lazyload">
 <p>填入以下内容<br>名称：<code>Strict-Transport-Security</code><br>值：<code>max-age=31536000;</code><br>单击”确定”按钮。</p>
-<h2 id="1-5-2-检验配置"><a href="#1-5-2-检验配置" class="headerlink" title="1.5.2 检验配置"></a>1.5.2 <strong>检验配置</strong></h2><p>为了检测HSTS是否成功配置，您可以使用Chrome浏览器打开目标网页，然后按下键盘上的“F12”键，打开“开发者控制台”，并选择“Network”选项卡。在该选项卡中，找到您的域名点击查看其Header响应内容，以确认是否包含Strict-Transport-Security信息，如果包含，则说明HSTS配置成功。</p>
+<h3 id="1-5-2-检验配置"><a href="#1-5-2-检验配置" class="headerlink" title="1.5.2 检验配置"></a>1.5.2 <strong>检验配置</strong></h3><p>为了检测HSTS是否成功配置，您可以使用Chrome浏览器打开目标网页，然后按下键盘上的“F12”键，打开“开发者控制台”，并选择“Network”选项卡。在该选项卡中，找到您的域名点击查看其Header响应内容，以确认是否包含Strict-Transport-Security信息，如果包含，则说明HSTS配置成功。</p>
 <img src="/2024/ssl%E8%AF%81%E4%B9%A6%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE/HSTS.png" class="lazyload" data-srcset="/2024/ssl%E8%AF%81%E4%B9%A6%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE/HSTS.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class=" lazyload">
-<h2 id="1-6-OCSP服务器验证问题"><a href="#1-6-OCSP服务器验证问题" class="headerlink" title="1.6 OCSP服务器验证问题"></a>1.6 <strong>OCSP服务器验证问题</strong></h2><p>客户端在访问 HTTPS 网站时，需要对网站的 SSL 证书进行 OCSP 验证，以确保证书的有效性。但是，如果客户端无法连接互联网，那么就无法进行这个验证，这可能会导致 SSL 连接失败。<br>为了解决客户端无法连接互联网时无法进行 OCSP 验证的问题，可以采取启用 OCSP Stapling 的方案。<br>启用 OCSP Stapling需要在服务器端进行配置，使其能够定期从 CA 获取证书状态并缓存，然后将其作为响应返回给客户端。但是，服务器需要连接到外部网络的 OCSP 服务器进行验证，因此需要确保防火墙已经放行了相应的网络端口或者添加了相应的策略，以确保服务器能够成功连接到 OCSP 服务器进行验证。这样可以有效地减少对外部网络的依赖，提高安全性和性能。<br>常见的 SSL 证书品牌提供的 OCSP 服务器地址如下：</p>
+<h3 id="1-6-OCSP服务器验证问题"><a href="#1-6-OCSP服务器验证问题" class="headerlink" title="1.6 OCSP服务器验证问题"></a>1.6 <strong>OCSP服务器验证问题</strong></h3><p>客户端在访问 HTTPS 网站时，需要对网站的 SSL 证书进行 OCSP 验证，以确保证书的有效性。但是，如果客户端无法连接互联网，那么就无法进行这个验证，这可能会导致 SSL 连接失败。<br>为了解决客户端无法连接互联网时无法进行 OCSP 验证的问题，可以采取启用 OCSP Stapling 的方案。<br>启用 OCSP Stapling需要在服务器端进行配置，使其能够定期从 CA 获取证书状态并缓存，然后将其作为响应返回给客户端。但是，服务器需要连接到外部网络的 OCSP 服务器进行验证，因此需要确保防火墙已经放行了相应的网络端口或者添加了相应的策略，以确保服务器能够成功连接到 OCSP 服务器进行验证。这样可以有效地减少对外部网络的依赖，提高安全性和性能。<br>常见的 SSL 证书品牌提供的 OCSP 服务器地址如下：</p>
 <ul>
 <li>锐安信：<a target="_blank" rel="noopener" href="http://ocsp.sectigochina.com/">http://ocsp.sectigochina.com</a></li>
 <li>Sectigo：<a target="_blank" rel="noopener" href="http://ocsp.sectigo.com/">http://ocsp.sectigo.com</a></li>
@@ -2600,7 +2599,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>配置完成后，需要重启Apache。</p>
 <h3 id="IIS-2"><a href="#IIS-2" class="headerlink" title="IIS"></a>IIS</h3><p>对于 Windows 服务器，您需要做的就是验证您正在运行的 Windows Server 版本。Windows Server 2008 及更高版本默认支持并启用 OCSP Stapling。如果您运行的是 2008 之前的 Windows Server，要启用OCSP Stapling，您需要升级到 Windows Server 2008 或更高版本。</p>
 <h2 id="4-检验配置"><a href="#4-检验配置" class="headerlink" title="4 检验配置"></a>4 <strong>检验配置</strong></h2><p>要检验OCSP Stapling是否配置成功，可以使用以下命令：<br><code>openssl s_client -connect yourdomain.com:443 –status</code><br>其中yourdomain.com是你要检验的域名。运行命令后，查看输出结果中是否有以下返回：<br>OCSP Response Status: successful (0x0)<br>如果有这个返回，说明OCSP Stapling已经配置成功。</p>
-<h1 id="5-国内外OCSP服务器响应速度对比"><a href="#5-国内外OCSP服务器响应速度对比" class="headerlink" title="5 国内外OCSP服务器响应速度对比"></a>5 <strong>国内外OCSP服务器响应速度对比</strong></h1><ol>
+<h2 id="5-国内外OCSP服务器响应速度对比"><a href="#5-国内外OCSP服务器响应速度对比" class="headerlink" title="5 国内外OCSP服务器响应速度对比"></a>5 <strong>国内外OCSP服务器响应速度对比</strong></h2><ol>
 <li>在HTTPS通信中，OCSP（在线证书状态协议）用于检查数字证书的状态，以验证证书是否已经被吊销。OCSP响应速度的快慢，会影响到HTTPS网站的访问速度。</li>
 <li>如果OCSP服务器的位置距离客户端越近，HTTPS网站的访问速度就越快。因为当客户端访问HTTPS网站时，客户端会检查证书的状态并请求OCSP服务器获取响应。如果OCSP服务器的位置过远，将会导致响应延迟，从而影响HTTPS网站的访问速度。</li>
 <li>因此，如果OCSP服务器的位置近，将会使HTTPS网站的访问速度更快，从而提升用户体验。</li>
@@ -2618,7 +2617,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <td>81</td>
 </tr>
 </tbody></table>
-<h1 id="6-SSL访问速度测试"><a href="#6-SSL访问速度测试" class="headerlink" title="6 SSL访问速度测试"></a>6 <strong>SSL访问速度测试</strong></h1><p>我们使用 Apache ab 工具对不同的 SSL 证书在不同的 Web 应用中进行了 100 次请求测试，每次并发数为10。以下是我们测试的结果：</p>
+<h2 id="6-SSL访问速度测试"><a href="#6-SSL访问速度测试" class="headerlink" title="6 SSL访问速度测试"></a>6 <strong>SSL访问速度测试</strong></h2><p>我们使用 Apache ab 工具对不同的 SSL 证书在不同的 Web 应用中进行了 100 次请求测试，每次并发数为10。以下是我们测试的结果：</p>
 <table>
 <thead>
 <tr>
@@ -2654,7 +2653,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tr>
 </tbody></table>
 <p>由于测试环境为本地环境，响应时间较短，因此测试结果仅供参考。</p>
-<h1 id="7-如何测试部署ssl证书后的性能"><a href="#7-如何测试部署ssl证书后的性能" class="headerlink" title="7 如何测试部署ssl证书后的性能"></a>7 <strong>如何测试部署ssl证书后的性能</strong></h1><p>在部署 SSL 证书后，可能需要测试网站的性能。Apache Benchmark (ab) 是一个常用的性能测试工具，它可以模拟大量用户同时访问网站，从而测试网站的性能和稳定性。ab 可以通过命令行发送请求，支持 HTTP 和 HTTPS 协议。<br>以下是在 Ubuntu 和 CentOS 系统中安装 ab 工具的步骤：<br>在 Ubuntu 中，可以使用以下命令安装：</p>
+<h2 id="7-如何测试部署ssl证书后的性能"><a href="#7-如何测试部署ssl证书后的性能" class="headerlink" title="7 如何测试部署ssl证书后的性能"></a>7 <strong>如何测试部署ssl证书后的性能</strong></h2><p>在部署 SSL 证书后，可能需要测试网站的性能。Apache Benchmark (ab) 是一个常用的性能测试工具，它可以模拟大量用户同时访问网站，从而测试网站的性能和稳定性。ab 可以通过命令行发送请求，支持 HTTP 和 HTTPS 协议。<br>以下是在 Ubuntu 和 CentOS 系统中安装 ab 工具的步骤：<br>在 Ubuntu 中，可以使用以下命令安装：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt-get install apache2-utils</span><br></pre></td></tr></table></figure>
 <p>在 CentOS 中，可以使用以下命令安装：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum update</span><br><span class="line">yum install httpd-tools</span><br></pre></td></tr></table></figure>
@@ -2776,7 +2775,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   
 
-  
+
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2024/ssl%E8%AF%81%E4%B9%A6%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
 
 
 
@@ -2810,7 +2820,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-1-%E8%AF%81%E4%B9%A6%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="toc-text">1.1 证书完整性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-2-%E8%AF%81%E4%B9%A6%E9%93%BE"><span class="toc-text">1.2 证书链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-3-%E5%8A%A0%E5%AF%86%E5%A5%97%E4%BB%B6%E4%B8%8E%E5%8D%8F%E8%AE%AE%E7%89%88%E6%9C%AC"><span class="toc-text">1.3 加密套件与协议版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-4-%E5%8A%A0%E5%AF%86%E5%A5%97%E4%BB%B6%E4%B8%8ESSL%E5%8D%8F%E8%AE%AE%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-text">1.4 加密套件与SSL协议配置方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Tomcat"><span class="toc-text">Tomcat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nginx"><span class="toc-text">Nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Apache"><span class="toc-text">Apache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IIS"><span class="toc-text">IIS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-HSTS"><span class="toc-text">1.5 HSTS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-1-HSTS%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-text">1.5.1 HSTS的配置方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Tomcat-1"><span class="toc-text">Tomcat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Nginx-1"><span class="toc-text">Nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Apache-1"><span class="toc-text">Apache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IIS-1"><span class="toc-text">IIS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-5-2-%E6%A3%80%E9%AA%8C%E9%85%8D%E7%BD%AE"><span class="toc-text">1.5.2 检验配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-6-OCSP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%AA%8C%E8%AF%81%E9%97%AE%E9%A2%98"><span class="toc-text">1.6 OCSP服务器验证问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-OCSP-Stapling"><span class="toc-text">2 OCSP Stapling</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-text">3 配置方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Nginx-2"><span class="toc-text">Nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Apache-2"><span class="toc-text">Apache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IIS-2"><span class="toc-text">IIS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%A3%80%E9%AA%8C%E9%85%8D%E7%BD%AE"><span class="toc-text">4 检验配置</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-SSL%E8%AF%81%E4%B9%A6%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE"><span class="toc-text">1 SSL证书优化建议</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E8%AF%81%E4%B9%A6%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="toc-text">1.1 证书完整性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E8%AF%81%E4%B9%A6%E9%93%BE"><span class="toc-text">1.2 证书链</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%8A%A0%E5%AF%86%E5%A5%97%E4%BB%B6%E4%B8%8E%E5%8D%8F%E8%AE%AE%E7%89%88%E6%9C%AC"><span class="toc-text">1.3 加密套件与协议版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E5%8A%A0%E5%AF%86%E5%A5%97%E4%BB%B6%E4%B8%8ESSL%E5%8D%8F%E8%AE%AE%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-text">1.4 加密套件与SSL协议配置方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Tomcat"><span class="toc-text">Tomcat</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Nginx"><span class="toc-text">Nginx</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Apache"><span class="toc-text">Apache</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IIS"><span class="toc-text">IIS</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-HSTS"><span class="toc-text">1.5 HSTS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-1-HSTS%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-text">1.5.1 HSTS的配置方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Tomcat-1"><span class="toc-text">Tomcat</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Nginx-1"><span class="toc-text">Nginx</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Apache-1"><span class="toc-text">Apache</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IIS-1"><span class="toc-text">IIS</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-2-%E6%A3%80%E9%AA%8C%E9%85%8D%E7%BD%AE"><span class="toc-text">1.5.2 检验配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-OCSP%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%AA%8C%E8%AF%81%E9%97%AE%E9%A2%98"><span class="toc-text">1.6 OCSP服务器验证问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-OCSP-Stapling"><span class="toc-text">2 OCSP Stapling</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95%EF%BC%9A"><span class="toc-text">3 配置方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Nginx-2"><span class="toc-text">Nginx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Apache-2"><span class="toc-text">Apache</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#IIS-2"><span class="toc-text">IIS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%A3%80%E9%AA%8C%E9%85%8D%E7%BD%AE"><span class="toc-text">4 检验配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%9B%BD%E5%86%85%E5%A4%96OCSP%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%93%8D%E5%BA%94%E9%80%9F%E5%BA%A6%E5%AF%B9%E6%AF%94"><span class="toc-text">5 国内外OCSP服务器响应速度对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-SSL%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E6%B5%8B%E8%AF%95"><span class="toc-text">6 SSL访问速度测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%A6%82%E4%BD%95%E6%B5%8B%E8%AF%95%E9%83%A8%E7%BD%B2ssl%E8%AF%81%E4%B9%A6%E5%90%8E%E7%9A%84%E6%80%A7%E8%83%BD"><span class="toc-text">7 如何测试部署ssl证书后的性能</span></a></li></ol>
     </div>
   </section>
 
@@ -3064,6 +3074,55 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
+      <script>
+  volantis.layoutHelper("comments",`<div id="giscus_container"></div>`)
+
+  volantis.giscus = {};
+
+  function check_giscus() {
+    if (volantis.dark.mode === "dark") {
+      volantis.giscus.Theme = 'dark';
+    } else {
+      volantis.giscus.Theme = 'light';
+    }
+
+    return document.getElementById("giscus_container");
+  }
+
+  function pjax_giscus() {
+    const HEAD = check_giscus();
+    if (!HEAD) return;
+    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"}},pdata.commentConfig)
+    const script = document.createElement('script');
+    script.setAttribute('src', 'https://giscus.app/client.js');
+    Object.keys(cfg).forEach(k=>{
+      if (k != "theme") {
+        script.setAttribute('data-'+k, cfg[k]);
+      }
+    })
+    script.setAttribute('data-theme', volantis.giscus.Theme);
+    script.setAttribute('crossorigin', "anonymous");
+    HEAD.appendChild(script);
+  }
+
+  function dark_giscus() {
+    const HEAD = check_giscus();
+    if (!HEAD) return;
+
+    const message = {
+      setConfig: {
+        theme: volantis.giscus.Theme
+      }
+    };
+    const giscusIframe = document.querySelector('iframe.giscus-frame');
+    giscusIframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+  }
+  pjax_giscus();
+  volantis.pjax.push(pjax_giscus);
+  volantis.dark.push(dark_giscus);
+</script>
+
+    
 
 
 
@@ -3328,7 +3387,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Nye's Blog","url":"https://www.nye.asia/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Nye","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.nye.asia/","sameAs":["https://github.com/volantis-x"],"description":"Nye Blog记录零碎技术文档的个人技术博客。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.nye.asia/","name":"Nye's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.nye.asia/categories/SSL/","name":"SSL"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.nye.asia/2024/ssl证书优化建议/","name":"ssl证书优化建议"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Nye's Blog","url":"https://www.nye.asia/","keywords":"Nye's Blog、Nye博客、个人技术博客","description":"Nye Blog记录零碎技术文档的个人技术博客。","author":{"@type":"Person","name":"Nye","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.nye.asia/","description":"Nye Blog记录零碎技术文档的个人技术博客。"},"publisher":{"@type":"Organization","name":"Nye's Blog","url":"https://www.nye.asia/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.nye.asia?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ssl证书优化建议","description":"Nye Blog记录零碎技术文档的个人技术博客。","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.nye.asia/2024/ssl%E8%AF%81%E4%B9%A6%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE/"},"author":{"@type":"Person","name":"Nye","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.nye.asia/"},"publisher":{"@type":"Organization","name":"Nye's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.nye.asia/2024/ssl%E8%AF%81%E4%B9%A6%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE/","wordCount":0,"datePublished":"2024-08-27T03:08:08.000Z","dateModified":"2024-08-27T03:25:23.025Z","articleSection":"SSL","keywords":"Linux,Windows,Nginx,Apache,Tomcat,IIS","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Nye's Blog","url":"https://www.nye.asia/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Nye","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.nye.asia/","sameAs":["https://github.com/volantis-x"],"description":"Nye Blog记录零碎技术文档的个人技术博客。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.nye.asia/","name":"Nye's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.nye.asia/categories/SSL/","name":"SSL"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.nye.asia/2024/ssl证书优化建议/","name":"ssl证书优化建议"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Nye's Blog","url":"https://www.nye.asia/","keywords":"Nye's Blog、Nye博客、个人技术博客","description":"Nye Blog记录零碎技术文档的个人技术博客。","author":{"@type":"Person","name":"Nye","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.nye.asia/","description":"Nye Blog记录零碎技术文档的个人技术博客。"},"publisher":{"@type":"Organization","name":"Nye's Blog","url":"https://www.nye.asia/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.nye.asia?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"ssl证书优化建议","description":"Nye Blog记录零碎技术文档的个人技术博客。","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.nye.asia/2024/ssl%E8%AF%81%E4%B9%A6%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE/"},"author":{"@type":"Person","name":"Nye","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.nye.asia/"},"publisher":{"@type":"Organization","name":"Nye's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.nye.asia/2024/ssl%E8%AF%81%E4%B9%A6%E4%BC%98%E5%8C%96%E5%BB%BA%E8%AE%AE/","wordCount":0,"datePublished":"2024-08-27T03:08:08.000Z","dateModified":"2024-08-27T09:49:13.119Z","articleSection":"SSL","keywords":"Linux,Windows,Nginx,Apache,Tomcat,IIS","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
