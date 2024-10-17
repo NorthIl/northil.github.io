@@ -1744,7 +1744,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1729072745422),
+    lastupdate: new Date(1729129720512),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2480,15 +2480,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     <h2 class="article-title"  itemprop="name headline">
       <a href="/2024/Windows10%E6%97%A0%E6%B3%95%E9%94%81%E5%AE%9A/"  itemprop="url">
-        hyper-v虚拟机卡死
+        Windows10 Win+L无法锁定
       </a>
     </h2>
   
   <div class='md article-desc' itemprop="articleBody">
     
       
-        Win+L无法锁定屏幕，CTRL+ALT+DELETE界面不显示锁定选项需要修改注册表，也可以直接这段脚本为.reg文件并运行
-123Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]&quot;DisableLockWor...
+        Win+L无法锁定屏幕，CTRL+ALT+DELETE界面不显示锁定选项
+导致这个问题的原因有很多，可能是程序导致的按键冲突，这种情况需要排查具体是哪个程序造成的。还有的情况就是注册表出现问题。
+解决方法：
+需要修改注册表，也可以直接保存这段脚本为Enable_Lock_computer.reg文件并运行
+12[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Wi...
       
     
   </div>
@@ -2957,7 +2960,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>本站总字数：</div>
-          <div>4.3k 字</div>
+          <div>4.4k 字</div>
         </div>
       
 
@@ -2982,7 +2985,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <div class="webinfo-item">
           <div>最后活动时间：</div>
-          <div id="last-update-show">2024-10-16 日</div>
+          <div id="last-update-show">2024-10-17 日</div>
         </div>
       
     </div>

@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>hyper-v虚拟机卡死 - Nye's Blog</title>
+  <title>Windows10 Win+L无法锁定 - Nye's Blog</title>
   <meta name="keywords" content="Windows,Nye's Blog、Nye博客、个人技术博客">
   <meta desc name="description" content="Nye Blog记录零碎技术文档的个人技术博客。 - Nye - Nye's Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="hyper-v虚拟机卡死">
+<meta property="og:title" content="Windows10 Win+L无法锁定">
 <meta property="og:url" content="https://www.nye.asia/2024/Windows10%E6%97%A0%E6%B3%95%E9%94%81%E5%AE%9A/index.html">
 <meta property="og:site_name" content="Nye&#39;s Blog">
-<meta property="og:description" content="Win+L无法锁定屏幕，CTRL+ALT+DELETE界面不显示锁定选项需要修改注册表，也可以直接这段脚本为.reg文件并运行 123Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]&quot;DisableLockWorkst">
+<meta property="og:description" content="Win+L无法锁定屏幕，CTRL+ALT+DELETE界面不显示锁定选项 导致这个问题的原因有很多，可能是程序导致的按键冲突，这种情况需要排查具体是哪个程序造成的。还有的情况就是注册表出现问题。 解决方法： 需要修改注册表，也可以直接保存这段脚本为Enable_Lock_computer.reg文件并运行 12[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windo">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-10-17T02:10:00.000Z">
-<meta property="article:modified_time" content="2024-10-16T09:58:32.081Z">
+<meta property="article:modified_time" content="2024-10-17T01:47:44.358Z">
 <meta property="article:author" content="Nye">
 <meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary">
@@ -1746,7 +1746,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1729072745422),
+    lastupdate: new Date(1729129720512),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2458,7 +2458,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        hyper-v虚拟机卡死
+        Windows10 Win+L无法锁定
       </h1>
       <div class='new-meta-box'>
         
@@ -2522,7 +2522,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>61 words</p>
+      <p>119 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
@@ -2545,8 +2545,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p><code>Win+L</code>无法锁定屏幕，<code>CTRL+ALT+DELETE</code>界面不显示锁定选项<br>需要修改注册表，也可以直接这段脚本为.reg文件并运行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]</span><br><span class="line">&quot;DisableLockWorkstation&quot;=dword:00000000</span><br></pre></td></tr></table></figure>
+    <p><code>Win+L</code>无法锁定屏幕，<code>CTRL+ALT+DELETE</code>界面不显示锁定选项</p>
+<p>导致这个问题的原因有很多，可能是程序导致的按键冲突，这种情况需要排查具体是哪个程序造成的。还有的情况就是注册表出现问题。</p>
+<p>解决方法：</p>
+<p>需要修改注册表，也可以直接保存这段脚本为Enable_Lock_computer.reg文件并运行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon]</span><br><span class="line">&quot;DisableLockWorkstation&quot;=dword:00000000</span><br></pre></td></tr></table></figure>
   </div>
   
   
@@ -2588,7 +2591,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.nye.asia/2024/Windows10%E6%97%A0%E6%B3%95%E9%94%81%E5%AE%9A/&title=hyper-v虚拟机卡死 - Nye's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.nye.asia/2024/Windows10%E6%97%A0%E6%B3%95%E9%94%81%E5%AE%9A/&title=Windows10 Win+L无法锁定 - Nye's Blog&summary="
           
           >
           
@@ -2600,7 +2603,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.nye.asia/2024/Windows10%E6%97%A0%E6%B3%95%E9%94%81%E5%AE%9A/&title=hyper-v虚拟机卡死 - Nye's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.nye.asia/2024/Windows10%E6%97%A0%E6%B3%95%E9%94%81%E5%AE%9A/&title=Windows10 Win+L无法锁定 - Nye's Blog&summary="
           
           >
           
@@ -2612,7 +2615,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.nye.asia/2024/Windows10%E6%97%A0%E6%B3%95%E9%94%81%E5%AE%9A/&title=hyper-v虚拟机卡死 - Nye's Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.nye.asia/2024/Windows10%E6%97%A0%E6%B3%95%E9%94%81%E5%AE%9A/&title=Windows10 Win+L无法锁定 - Nye's Blog&summary="
           
           >
           
@@ -3235,7 +3238,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Nye's Blog","url":"https://www.nye.asia/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Nye","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.nye.asia/","sameAs":["https://github.com/volantis-x"],"description":"Nye Blog记录零碎技术文档的个人技术博客。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.nye.asia/","name":"Nye's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.nye.asia/categories/Windows/","name":"Windows"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.nye.asia/2024/Windows10无法锁定/","name":"hyper-v虚拟机卡死"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Nye's Blog","url":"https://www.nye.asia/","keywords":"Nye's Blog、Nye博客、个人技术博客","description":"Nye Blog记录零碎技术文档的个人技术博客。","author":{"@type":"Person","name":"Nye","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.nye.asia/","description":"Nye Blog记录零碎技术文档的个人技术博客。"},"publisher":{"@type":"Organization","name":"Nye's Blog","url":"https://www.nye.asia/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.nye.asia?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"hyper-v虚拟机卡死","description":"Nye Blog记录零碎技术文档的个人技术博客。","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.nye.asia/2024/Windows10%E6%97%A0%E6%B3%95%E9%94%81%E5%AE%9A/"},"author":{"@type":"Person","name":"Nye","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.nye.asia/"},"publisher":{"@type":"Organization","name":"Nye's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.nye.asia/2024/Windows10%E6%97%A0%E6%B3%95%E9%94%81%E5%AE%9A/","wordCount":0,"datePublished":"2024-10-17T02:10:00.000Z","dateModified":"2024-10-16T09:58:32.081Z","articleSection":"Windows","keywords":"Windows","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"Nye's Blog","url":"https://www.nye.asia/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Nye","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.nye.asia/","sameAs":["https://github.com/volantis-x"],"description":"Nye Blog记录零碎技术文档的个人技术博客。"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.nye.asia/","name":"Nye's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.nye.asia/categories/Windows/","name":"Windows"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.nye.asia/2024/Windows10无法锁定/","name":"Windows10 Win+L无法锁定"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"Nye's Blog","url":"https://www.nye.asia/","keywords":"Nye's Blog、Nye博客、个人技术博客","description":"Nye Blog记录零碎技术文档的个人技术博客。","author":{"@type":"Person","name":"Nye","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.nye.asia/","description":"Nye Blog记录零碎技术文档的个人技术博客。"},"publisher":{"@type":"Organization","name":"Nye's Blog","url":"https://www.nye.asia/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.nye.asia?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Windows10 Win+L无法锁定","description":"Nye Blog记录零碎技术文档的个人技术博客。","inLanguage":["zh-cn","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.nye.asia/2024/Windows10%E6%97%A0%E6%B3%95%E9%94%81%E5%AE%9A/"},"author":{"@type":"Person","name":"Nye","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.nye.asia/"},"publisher":{"@type":"Organization","name":"Nye's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.nye.asia/2024/Windows10%E6%97%A0%E6%B3%95%E9%94%81%E5%AE%9A/","wordCount":0,"datePublished":"2024-10-17T02:10:00.000Z","dateModified":"2024-10-17T01:47:44.358Z","articleSection":"Windows","keywords":"Windows","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
